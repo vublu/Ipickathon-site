@@ -12,3 +12,10 @@
 [2018-06-21 08:41:08 +0000] [37] [INFO] Booting worker with pid: 37
 [2018-06-21 08:41:08 +0000] [48] [INFO] Booting worker with pid: 48
 [2018-06-21 08:41:08 +0000] [60] [INFO] Booting worker with pid: 60
+[2018-06-21 14:40:35 +0000] [27] [INFO] Starting gunicorn 19.7.1
+[2018-06-21 14:40:35 +0000] [27] [INFO] Listening at: http://0.0.0.0:8000 (27)
+[2018-06-21 14:40:35 +0000] [27] [INFO] Using worker: gevent
+[2018-06-21 14:40:35 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-06-21 14:40:35 +0000] [38] [INFO] Booting worker with pid: 38
+[2018-06-21 14:40:35 +0000] [39] [INFO] Booting worker with pid: 39
+[2018-06-21 14:40:35 +0000] [40] [INFO] Booting worker with pid: 40
