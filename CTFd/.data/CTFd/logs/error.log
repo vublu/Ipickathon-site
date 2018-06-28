@@ -123,3 +123,30 @@
 [2018-06-26 07:41:14 +0000] [37] [INFO] Booting worker with pid: 37
 [2018-06-26 07:41:14 +0000] [53] [INFO] Booting worker with pid: 53
 [2018-06-26 07:41:14 +0000] [64] [INFO] Booting worker with pid: 64
+[2018-06-26 15:30:47 +0000] [26] [INFO] Starting gunicorn 19.7.1
+[2018-06-26 15:30:47 +0000] [26] [INFO] Listening at: http://0.0.0.0:8000 (26)
+[2018-06-26 15:30:47 +0000] [26] [INFO] Using worker: gevent
+[2018-06-26 15:30:47 +0000] [36] [INFO] Booting worker with pid: 36
+[2018-06-26 15:30:47 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-06-26 15:30:47 +0000] [38] [INFO] Booting worker with pid: 38
+[2018-06-26 15:30:47 +0000] [52] [INFO] Booting worker with pid: 52
+[2018-06-27 07:23:23 +0000] [44] [INFO] Starting gunicorn 19.7.1
+[2018-06-27 07:23:23 +0000] [44] [INFO] Listening at: http://0.0.0.0:8000 (44)
+[2018-06-27 07:23:23 +0000] [44] [INFO] Using worker: gevent
+[2018-06-27 07:23:23 +0000] [54] [INFO] Booting worker with pid: 54
+[2018-06-27 07:23:23 +0000] [55] [INFO] Booting worker with pid: 55
+[2018-06-27 07:23:23 +0000] [56] [INFO] Booting worker with pid: 56
+[2018-06-27 07:23:23 +0000] [68] [INFO] Booting worker with pid: 68
+[2018-06-27 11:25:41 +0000] [44] [CRITICAL] WORKER TIMEOUT (pid:56)
+[2018-06-27 11:25:45 +0000] [44] [CRITICAL] WORKER TIMEOUT (pid:54)
+[2018-06-27 11:25:45 +0000] [44] [CRITICAL] WORKER TIMEOUT (pid:55)
+[2018-06-27 11:25:48 +0000] [114] [INFO] Booting worker with pid: 114
+[2018-06-27 11:25:48 +0000] [116] [INFO] Booting worker with pid: 116
+[2018-06-27 11:25:48 +0000] [115] [INFO] Booting worker with pid: 115
+[2018-06-28 09:07:40 +0000] [46] [INFO] Starting gunicorn 19.7.1
+[2018-06-28 09:07:40 +0000] [46] [INFO] Listening at: http://0.0.0.0:8000 (46)
+[2018-06-28 09:07:40 +0000] [46] [INFO] Using worker: gevent
+[2018-06-28 09:07:40 +0000] [56] [INFO] Booting worker with pid: 56
+[2018-06-28 09:07:40 +0000] [57] [INFO] Booting worker with pid: 57
+[2018-06-28 09:07:41 +0000] [58] [INFO] Booting worker with pid: 58
+[2018-06-28 09:07:41 +0000] [59] [INFO] Booting worker with pid: 59
