@@ -240,3 +240,1029 @@ Traceback (most recent call last):
   File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
     return render_template('errors/500.html', error=error.description), 500
 AttributeError: 'IntegrityError' object has no attribute 'description'
+[2018-07-02 08:38:51 +0000] [27] [INFO] Starting gunicorn 19.7.1
+[2018-07-02 08:38:51 +0000] [27] [INFO] Listening at: http://0.0.0.0:8000 (27)
+[2018-07-02 08:38:51 +0000] [27] [INFO] Using worker: gevent
+[2018-07-02 08:38:51 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-02 08:38:51 +0000] [38] [INFO] Booting worker with pid: 38
+[2018-07-02 08:38:51 +0000] [39] [INFO] Booting worker with pid: 39
+[2018-07-02 08:38:51 +0000] [40] [INFO] Booting worker with pid: 40
+[2018-07-02 13:42:58 +0000] [52] [INFO] Starting gunicorn 19.7.1
+[2018-07-02 13:42:58 +0000] [52] [INFO] Listening at: http://0.0.0.0:8000 (52)
+[2018-07-02 13:42:58 +0000] [52] [INFO] Using worker: gevent
+[2018-07-02 13:42:58 +0000] [62] [INFO] Booting worker with pid: 62
+[2018-07-02 13:42:58 +0000] [63] [INFO] Booting worker with pid: 63
+[2018-07-02 13:42:58 +0000] [64] [INFO] Booting worker with pid: 64
+[2018-07-02 13:42:58 +0000] [65] [INFO] Booting worker with pid: 65
+[2018-07-03 06:59:38 +0000] [52] [INFO] Handling signal: term
+[2018-07-03 06:59:38 +0000] [62] [INFO] Worker exiting (pid: 62)
+[2018-07-03 06:59:38 +0000] [63] [INFO] Worker exiting (pid: 63)
+[2018-07-03 06:59:39 +0000] [64] [INFO] Worker exiting (pid: 64)
+[2018-07-03 06:59:39 +0000] [65] [INFO] Worker exiting (pid: 65)
+[2018-07-03 06:59:39 +0000] [52] [INFO] Shutting down: Master
+[2018-07-03 07:15:16 +0000] [45] [INFO] Starting gunicorn 19.7.1
+[2018-07-03 07:15:16 +0000] [45] [INFO] Listening at: http://0.0.0.0:8000 (45)
+[2018-07-03 07:15:16 +0000] [45] [INFO] Using worker: gevent
+[2018-07-03 07:15:16 +0000] [55] [INFO] Booting worker with pid: 55
+[2018-07-03 07:15:16 +0000] [56] [INFO] Booting worker with pid: 56
+[2018-07-03 07:15:16 +0000] [57] [INFO] Booting worker with pid: 57
+[2018-07-03 07:15:16 +0000] [58] [INFO] Booting worker with pid: 58
+[2018-07-03 14:38:00,145] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 79, in admin_pages_view
+    db.session.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2243, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2369, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2333, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 165, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1061, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (pymysql.err.IntegrityError) (1062, u"Duplicate entry 'bonjour' for key 'route'") [SQL: u'INSERT INTO pages (auth_required, title, route, html, draft) VALUES (%(auth_required)s, %(title)s, %(route)s, %(html)s, %(draft)s)'] [parameters: {'auth_required': 0, 'route': u'bonjour', 'html': u'<html xmlns="http://www.w3.org/1999/xhtml">\r\n<head>\r\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n<title>Fak dis she ... (24296 characters truncated) ... actually a wizzard. but dont tell him, he likes it that way. ;(</span>\r\n\r\n\r\n\r\n</span>\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div></body>\r\n</html>\r\n', 'draft': 0, 'title': u''}] (Background on this error at: http://sqlalche.me/e/gkpj)
+[2018-07-03 14:38:00 +0000] [58] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'IntegrityError' object has no attribute 'description'
+[2018-07-03 14:38:06,438] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 79, in admin_pages_view
+    db.session.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2243, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2369, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2333, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 165, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1061, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (pymysql.err.IntegrityError) (1062, u"Duplicate entry 'bonjour' for key 'route'") [SQL: u'INSERT INTO pages (auth_required, title, route, html, draft) VALUES (%(auth_required)s, %(title)s, %(route)s, %(html)s, %(draft)s)'] [parameters: {'auth_required': 0, 'route': u'bonjour', 'html': u'<html xmlns="http://www.w3.org/1999/xhtml">\r\n<head>\r\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n<title>Fak dis she ... (24296 characters truncated) ... actually a wizzard. but dont tell him, he likes it that way. ;(</span>\r\n\r\n\r\n\r\n</span>\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div></body>\r\n</html>\r\n', 'draft': 0, 'title': u''}] (Background on this error at: http://sqlalche.me/e/gkpj)
+[2018-07-03 14:38:06 +0000] [55] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'IntegrityError' object has no attribute 'description'
+[2018-07-03 14:38:06,672] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 79, in admin_pages_view
+    db.session.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2243, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2369, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2333, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 165, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1061, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (pymysql.err.IntegrityError) (1062, u"Duplicate entry 'bonjour' for key 'route'") [SQL: u'INSERT INTO pages (auth_required, title, route, html, draft) VALUES (%(auth_required)s, %(title)s, %(route)s, %(html)s, %(draft)s)'] [parameters: {'auth_required': 0, 'route': u'bonjour', 'html': u'<html xmlns="http://www.w3.org/1999/xhtml">\r\n<head>\r\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n<title>Fak dis she ... (24296 characters truncated) ... actually a wizzard. but dont tell him, he likes it that way. ;(</span>\r\n\r\n\r\n\r\n</span>\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div></body>\r\n</html>\r\n', 'draft': 0, 'title': u''}] (Background on this error at: http://sqlalche.me/e/gkpj)
+[2018-07-03 14:38:06 +0000] [56] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'IntegrityError' object has no attribute 'description'
+[2018-07-03 14:38:06,800] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 79, in admin_pages_view
+    db.session.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2243, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2369, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2333, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 165, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1061, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (pymysql.err.IntegrityError) (1062, u"Duplicate entry 'bonjour' for key 'route'") [SQL: u'INSERT INTO pages (auth_required, title, route, html, draft) VALUES (%(auth_required)s, %(title)s, %(route)s, %(html)s, %(draft)s)'] [parameters: {'auth_required': 0, 'route': u'bonjour', 'html': u'<html xmlns="http://www.w3.org/1999/xhtml">\r\n<head>\r\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n<title>Fak dis she ... (24296 characters truncated) ... actually a wizzard. but dont tell him, he likes it that way. ;(</span>\r\n\r\n\r\n\r\n</span>\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div></body>\r\n</html>\r\n', 'draft': 0, 'title': u''}] (Background on this error at: http://sqlalche.me/e/gkpj)
+[2018-07-03 14:38:06 +0000] [56] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'IntegrityError' object has no attribute 'description'
+[2018-07-03 14:38:07,006] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 79, in admin_pages_view
+    db.session.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2243, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2369, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 2333, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 165, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/cursors.py", line 321, in _query
+    conn.query(q)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 860, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1061, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1349, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "/usr/local/lib/python2.7/site-packages/pymysql/connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python2.7/site-packages/pymysql/err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+IntegrityError: (pymysql.err.IntegrityError) (1062, u"Duplicate entry 'bonjour' for key 'route'") [SQL: u'INSERT INTO pages (auth_required, title, route, html, draft) VALUES (%(auth_required)s, %(title)s, %(route)s, %(html)s, %(draft)s)'] [parameters: {'title': u'', 'route': u'bonjour', 'html': u'<html xmlns="http://www.w3.org/1999/xhtml">\r\n<head>\r\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\r\n<title>Fak dis she ... (24296 characters truncated) ... actually a wizzard. but dont tell him, he likes it that way. ;(</span>\r\n\r\n\r\n\r\n</span>\r\n\r\n\r\n\r\n\r\n\r\n\r\n</div></body>\r\n</html>\r\n', 'draft': 0, 'auth_required': 0}] (Background on this error at: http://sqlalche.me/e/gkpj)
+[2018-07-03 14:38:07 +0000] [57] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'IntegrityError' object has no attribute 'description'
+[2018-07-03 15:28:58 +0000] [30] [INFO] Starting gunicorn 19.7.1
+[2018-07-03 15:28:58 +0000] [30] [INFO] Listening at: http://0.0.0.0:8000 (30)
+[2018-07-03 15:28:58 +0000] [30] [INFO] Using worker: gevent
+[2018-07-03 15:28:58 +0000] [40] [INFO] Booting worker with pid: 40
+[2018-07-03 15:28:58 +0000] [41] [INFO] Booting worker with pid: 41
+[2018-07-03 15:28:58 +0000] [43] [INFO] Booting worker with pid: 43
+[2018-07-03 15:28:59 +0000] [65] [INFO] Booting worker with pid: 65
+[2018-07-04 07:27:01 +0000] [26] [INFO] Starting gunicorn 19.7.1
+[2018-07-04 07:27:01 +0000] [26] [INFO] Listening at: http://0.0.0.0:8000 (26)
+[2018-07-04 07:27:01 +0000] [26] [INFO] Using worker: gevent
+[2018-07-04 07:27:01 +0000] [36] [INFO] Booting worker with pid: 36
+[2018-07-04 07:27:01 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-04 07:27:01 +0000] [43] [INFO] Booting worker with pid: 43
+[2018-07-04 07:27:01 +0000] [49] [INFO] Booting worker with pid: 49
+[2018-07-05 07:23:23 +0000] [26] [INFO] Starting gunicorn 19.7.1
+[2018-07-05 07:23:23 +0000] [26] [INFO] Listening at: http://0.0.0.0:8000 (26)
+[2018-07-05 07:23:23 +0000] [26] [INFO] Using worker: gevent
+[2018-07-05 07:23:23 +0000] [36] [INFO] Booting worker with pid: 36
+[2018-07-05 07:23:23 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-05 07:23:24 +0000] [49] [INFO] Booting worker with pid: 49
+[2018-07-05 07:23:24 +0000] [66] [INFO] Booting worker with pid: 66
+[2018-07-05 12:08:18,557] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:18 +0000] [49] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:23,648] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:23 +0000] [36] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:24,780] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:24 +0000] [66] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:24,944] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:24 +0000] [36] [ERROR] Error handling request /admin/pages?operation=save
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:25,447] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:25 +0000] [36] [ERROR] Error handling request /admin/pages?operation=save
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:25,490] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:25 +0000] [49] [ERROR] Error handling request /admin/pages?operation=save
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:25,832] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:25 +0000] [37] [ERROR] Error handling request /admin/pages?operation=save
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:29,310] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:29 +0000] [66] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:29,612] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:29 +0000] [36] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:29,761] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:29 +0000] [37] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 12:08:29,921] ERROR in app: Exception on /admin/pages [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 297, in decorated_function
+    return f(*args, **kwargs)
+  File "/opt/CTFd/CTFd/admin/pages.py", line 46, in admin_pages_view
+    return render_template('/admin/editor.html', page=page)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: /admin/editor.html
+[2018-07-05 12:08:29 +0000] [36] [ERROR] Error handling request /admin/pages?operation=publish
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
