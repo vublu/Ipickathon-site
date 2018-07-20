@@ -1266,3 +1266,232 @@ Traceback (most recent call last):
   File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
     return render_template('errors/500.html', error=error.description), 500
 AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-05 19:15:28 +0000] [49] [INFO] Starting gunicorn 19.7.1
+[2018-07-05 19:15:28 +0000] [49] [INFO] Listening at: http://0.0.0.0:8000 (49)
+[2018-07-05 19:15:28 +0000] [49] [INFO] Using worker: gevent
+[2018-07-05 19:15:28 +0000] [59] [INFO] Booting worker with pid: 59
+[2018-07-05 19:15:28 +0000] [60] [INFO] Booting worker with pid: 60
+[2018-07-05 19:15:28 +0000] [61] [INFO] Booting worker with pid: 61
+[2018-07-05 19:15:28 +0000] [62] [INFO] Booting worker with pid: 62
+[2018-07-06 07:21:31,072] ERROR in app: Exception on /team/4 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/views.py", line 207, in team
+    return render_template('team.html', solves=solves, awards=awards, team=user, score=score, place=place, score_frozen=utils.is_scoreboard_frozen())
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: team.html
+[2018-07-06 07:21:31 +0000] [60] [ERROR] Error handling request /team/4
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-06 07:21:36,675] ERROR in app: Exception on /team/5 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/views.py", line 207, in team
+    return render_template('team.html', solves=solves, awards=awards, team=user, score=score, place=place, score_frozen=utils.is_scoreboard_frozen())
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: team.html
+[2018-07-06 07:21:36 +0000] [61] [ERROR] Error handling request /team/5
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-06 07:21:39,449] ERROR in app: Exception on /team/6 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2284, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1807, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1710, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1805, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1791, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/opt/CTFd/CTFd/views.py", line 207, in team
+    return render_template('team.html', solves=solves, awards=awards, team=user, score=score, place=place, score_frozen=utils.is_scoreboard_frozen())
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/local/lib/python2.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/local/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/usr/local/lib/python2.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+TemplateNotFound: team.html
+[2018-07-06 07:21:39 +0000] [61] [ERROR] Error handling request /team/6
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 56, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/ggevent.py", line 152, in handle_request
+    super(GeventWorker, self).handle_request(*args)
+  File "/usr/local/lib/python2.7/site-packages/gunicorn/workers/async.py", line 107, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2301, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 2287, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python2.7/site-packages/flask/app.py", line 1740, in handle_exception
+    return self.finalize_request(handler(e), from_error_handler=True)
+  File "/opt/CTFd/CTFd/utils/__init__.py", line 137, in general_error
+    return render_template('errors/500.html', error=error.description), 500
+AttributeError: 'TemplateNotFound' object has no attribute 'description'
+[2018-07-06 07:35:51 +0000] [26] [INFO] Starting gunicorn 19.7.1
+[2018-07-06 07:35:51 +0000] [26] [INFO] Listening at: http://0.0.0.0:8000 (26)
+[2018-07-06 07:35:51 +0000] [26] [INFO] Using worker: gevent
+[2018-07-06 07:35:51 +0000] [36] [INFO] Booting worker with pid: 36
+[2018-07-06 07:35:51 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-06 07:35:51 +0000] [55] [INFO] Booting worker with pid: 55
+[2018-07-06 07:35:51 +0000] [68] [INFO] Booting worker with pid: 68
+[2018-07-09 06:42:26 +0000] [56] [INFO] Starting gunicorn 19.7.1
+[2018-07-09 06:42:26 +0000] [56] [INFO] Listening at: http://0.0.0.0:8000 (56)
+[2018-07-09 06:42:26 +0000] [56] [INFO] Using worker: gevent
+[2018-07-09 06:42:26 +0000] [66] [INFO] Booting worker with pid: 66
+[2018-07-09 06:42:26 +0000] [67] [INFO] Booting worker with pid: 67
+[2018-07-09 06:42:26 +0000] [78] [INFO] Booting worker with pid: 78
+[2018-07-09 06:42:26 +0000] [93] [INFO] Booting worker with pid: 93
+[2018-07-10 07:38:35 +0000] [26] [INFO] Starting gunicorn 19.7.1
+[2018-07-10 07:38:35 +0000] [26] [INFO] Listening at: http://0.0.0.0:8000 (26)
+[2018-07-10 07:38:35 +0000] [26] [INFO] Using worker: gevent
+[2018-07-10 07:38:35 +0000] [36] [INFO] Booting worker with pid: 36
+[2018-07-10 07:38:35 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-10 07:38:35 +0000] [38] [INFO] Booting worker with pid: 38
+[2018-07-10 07:38:36 +0000] [39] [INFO] Booting worker with pid: 39
+[2018-07-10 07:39:22 +0000] [27] [INFO] Starting gunicorn 19.7.1
+[2018-07-10 07:39:22 +0000] [27] [INFO] Listening at: http://0.0.0.0:8000 (27)
+[2018-07-10 07:39:22 +0000] [27] [INFO] Using worker: gevent
+[2018-07-10 07:39:22 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-10 07:39:22 +0000] [48] [INFO] Booting worker with pid: 48
+[2018-07-10 07:39:22 +0000] [52] [INFO] Booting worker with pid: 52
+[2018-07-10 07:39:22 +0000] [62] [INFO] Booting worker with pid: 62
+[2018-07-12 12:30:35 +0000] [26] [INFO] Starting gunicorn 19.7.1
+[2018-07-12 12:30:35 +0000] [26] [INFO] Listening at: http://0.0.0.0:8000 (26)
+[2018-07-12 12:30:35 +0000] [26] [INFO] Using worker: gevent
+[2018-07-12 12:30:35 +0000] [36] [INFO] Booting worker with pid: 36
+[2018-07-12 12:30:35 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-12 12:30:35 +0000] [39] [INFO] Booting worker with pid: 39
+[2018-07-12 12:30:35 +0000] [63] [INFO] Booting worker with pid: 63
+[2018-07-12 12:31:12 +0000] [27] [INFO] Starting gunicorn 19.7.1
+[2018-07-12 12:31:12 +0000] [27] [INFO] Listening at: http://0.0.0.0:8000 (27)
+[2018-07-12 12:31:12 +0000] [27] [INFO] Using worker: gevent
+[2018-07-12 12:31:12 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-12 12:31:12 +0000] [38] [INFO] Booting worker with pid: 38
+[2018-07-12 12:31:12 +0000] [39] [INFO] Booting worker with pid: 39
+[2018-07-12 12:31:12 +0000] [46] [INFO] Booting worker with pid: 46
+[2018-07-12 14:08:56 +0000] [27] [INFO] Starting gunicorn 19.7.1
+[2018-07-12 14:08:56 +0000] [27] [INFO] Listening at: http://0.0.0.0:8000 (27)
+[2018-07-12 14:08:56 +0000] [27] [INFO] Using worker: gevent
+[2018-07-12 14:08:56 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-12 14:08:56 +0000] [43] [INFO] Booting worker with pid: 43
+[2018-07-12 14:08:56 +0000] [51] [INFO] Booting worker with pid: 51
+[2018-07-12 14:08:56 +0000] [63] [INFO] Booting worker with pid: 63
+[2018-07-13 07:24:15 +0000] [26] [INFO] Starting gunicorn 19.7.1
+[2018-07-13 07:24:15 +0000] [26] [INFO] Listening at: http://0.0.0.0:8000 (26)
+[2018-07-13 07:24:15 +0000] [26] [INFO] Using worker: gevent
+[2018-07-13 07:24:15 +0000] [36] [INFO] Booting worker with pid: 36
+[2018-07-13 07:24:16 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-13 07:24:16 +0000] [44] [INFO] Booting worker with pid: 44
+[2018-07-13 07:24:16 +0000] [56] [INFO] Booting worker with pid: 56
+[2018-07-13 07:29:06 +0000] [27] [INFO] Starting gunicorn 19.7.1
+[2018-07-13 07:29:06 +0000] [27] [INFO] Listening at: http://0.0.0.0:8000 (27)
+[2018-07-13 07:29:06 +0000] [27] [INFO] Using worker: gevent
+[2018-07-13 07:29:06 +0000] [37] [INFO] Booting worker with pid: 37
+[2018-07-13 07:29:06 +0000] [38] [INFO] Booting worker with pid: 38
+[2018-07-13 07:29:07 +0000] [45] [INFO] Booting worker with pid: 45
+[2018-07-13 07:29:07 +0000] [64] [INFO] Booting worker with pid: 64
+[2018-07-16 13:25:52 +0000] [32] [INFO] Starting gunicorn 19.7.1
+[2018-07-16 13:25:52 +0000] [32] [INFO] Listening at: http://0.0.0.0:8000 (32)
+[2018-07-16 13:25:52 +0000] [32] [INFO] Using worker: gevent
+[2018-07-16 13:25:52 +0000] [42] [INFO] Booting worker with pid: 42
+[2018-07-16 13:25:52 +0000] [43] [INFO] Booting worker with pid: 43
+[2018-07-16 13:25:52 +0000] [44] [INFO] Booting worker with pid: 44
+[2018-07-16 13:25:52 +0000] [45] [INFO] Booting worker with pid: 45
+[2018-07-20 07:19:27 +0000] [64] [INFO] Starting gunicorn 19.7.1
+[2018-07-20 07:19:27 +0000] [64] [INFO] Listening at: http://0.0.0.0:8000 (64)
+[2018-07-20 07:19:27 +0000] [64] [INFO] Using worker: gevent
+[2018-07-20 07:19:27 +0000] [74] [INFO] Booting worker with pid: 74
+[2018-07-20 07:19:27 +0000] [75] [INFO] Booting worker with pid: 75
+[2018-07-20 07:19:27 +0000] [76] [INFO] Booting worker with pid: 76
+[2018-07-20 07:19:27 +0000] [94] [INFO] Booting worker with pid: 94
+[2018-07-20 08:22:04 +0000] [30] [INFO] Starting gunicorn 19.7.1
+[2018-07-20 08:22:04 +0000] [30] [INFO] Listening at: http://0.0.0.0:8000 (30)
+[2018-07-20 08:22:04 +0000] [30] [INFO] Using worker: gevent
+[2018-07-20 08:22:04 +0000] [40] [INFO] Booting worker with pid: 40
+[2018-07-20 08:22:04 +0000] [51] [INFO] Booting worker with pid: 51
+[2018-07-20 08:22:04 +0000] [54] [INFO] Booting worker with pid: 54
+[2018-07-20 08:22:04 +0000] [67] [INFO] Booting worker with pid: 67
